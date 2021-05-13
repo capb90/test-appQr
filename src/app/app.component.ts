@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
           if (videoDevices.length > 0){
               let choosenDev;
               for (const dev of videoDevices){
-                  if (dev.label.includes('front')){
+                  if (dev.label.includes('back')){
                       choosenDev = dev;
                       break;
                   }
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit {
   
       this.qrScannerComponent.capturedQr.subscribe(dataQR => {
        
-       console.log(dataQR)
+       window.location.href=dataQR
       });
      
        
